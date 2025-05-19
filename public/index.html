@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Chat App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>WebSocket Chat App</h1>
+        
+        <div id="initial-screen">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Enter your username">
+            </div>
+            <div class="actions">
+                <button id="create-room-btn">Create New Room</button>
+                <div class="join-room">
+                    <input type="text" id="room-id-input" placeholder="Enter Room ID">
+                    <button id="join-room-btn">Join Room</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="chat-screen" class="hidden">
+            <div class="room-info">
+                <h2>Room: <span id="room-id-display"></span></h2>
+                <button id="copy-room-id">Copy Room ID</button>
+            </div>
+            
+            <div id="chat-history"></div>
+            
+            <div class="message-input">
+                <input type="text" id="message-input" placeholder="Type your message...">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+
+        <div id="notifications" class="notifications"></div>
+    </div>
+    
+    <script src="client.js"></script>
+</body>
+</html>
