@@ -9,7 +9,7 @@ const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
 // Serve static files
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'docs')));
 
 // Chat rooms storage
 const rooms = new Map();
